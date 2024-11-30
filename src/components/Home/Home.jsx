@@ -150,13 +150,13 @@ export default function Home() {
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </a>
-            <a
+{/*             <a
              href: "/project"
               className="text-white border-white border py-2 px-4 rounded hover:bg-white/10 flex items-center"
             >
               <ExternalLink className="mr-2 h-4 w-4" />
               View Projects
-            </a>
+            </a> */}
           </motion.div>
 
           {/* Social Links */}
