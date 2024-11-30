@@ -9,16 +9,16 @@ export default function Footer() {
 
   const footerLinks = [
     {
-      title: "Navigation",
-      links: [
-        { name: "Home", href: "/" },
-        { name: "About", href: "/about" },
-        { name: "Skills", href: "/skills" },
-        { name: "Projects", href: "/project" },
-        { name: "Contact", href: "/contact" },
-      ],
-    },
-    {
+    //   title: "Navigation",
+    //   links: [
+    //     { name: "Home", href: "/" },
+    //     { name: "About", href: "/about" },
+    //     { name: "Skills", href: "/skills" },
+    //     { name: "Projects", href: "/project" },
+    //     { name: "Contact", href: "/contact" },
+    //   ],
+    // },
+    // {
       title: "Social",
       links: [
         { name: "GitHub", href: "https://github.com/tanu0604" },
