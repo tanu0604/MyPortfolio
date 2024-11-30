@@ -14,8 +14,8 @@ const projects = [
     description:
       "A fully responsive and dynamic portfolio website to showcase my skills, projects, and experiences.",
     image: portfolio, // Replace with your portfolio image
-    link: "https://yourportfolio.com", // Replace with your actual portfolio link
-    tags: ["React.js", "TypeScript", "Node Js", "Express Js", "MongoDb"],
+    link: "https://tanushreepaul.netlify.app/", // Replace with your actual portfolio link
+    tags: ["React.js","Tailwind CSS"],
   },
   {
     id: 2,
