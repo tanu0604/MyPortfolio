@@ -5,7 +5,10 @@ import "aos/dist/aos.css";
 import { Github, Linkedin, Mail, Download, ExternalLink, Code2 } from "lucide-react";
 import image from "../../assets/Home.png";
 import resume from "../../assets/TanushreePaul.pdf";
-
+import About from "../About/About"
+import ContactForm from "../ContactForm/ContactForm"
+import Skills from "../Skills/Skills"
+import Projects from "../Projects/Project"
 export default function Home() {
   useEffect(() => {
     AOS.init({
@@ -76,7 +79,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-black p-4" id="home">
+    <>
+    <div className="min-h-screen w-screen flex justify-center items-center bg-black p-4" id="home">
       <motion.div
         className="flex flex-col-reverse lg:flex-row lg:space-x-12 justify-center items-center max-w-7xl w-full"
         variants={containerVariants}
@@ -198,5 +202,11 @@ export default function Home() {
         </motion.div>
       </motion.div>
     </div>
+    <About></About>
+    <Skills></Skills>
+    <Projects></Projects>
+    <ContactForm/>
+
+    </>
   );
 }
