@@ -37,7 +37,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-black text-white relative">
+    <footer className="bg-black text-white relative w-screen">
       {/* Scroll to top button */}
       <div
         className="absolute -top-6 left-1/2 -translate-x-1/2"
