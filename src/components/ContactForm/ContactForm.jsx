@@ -53,7 +53,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center px-4 sm:px-6 lg:px-8" id='contact'>
+    <section className="min-h-screen w-screen bg-black flex items-center justify-center px-4 sm:px-6 lg:px-8" id='contact'>
       <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
         <div>
           <h2 className="mt-2 text-center text-3xl font-bold text-gray-900" data-aos="fade-in" data-aos-delay="500">
