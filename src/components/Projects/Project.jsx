@@ -68,7 +68,7 @@ export default function ProjectCarousel() {
   }, [controls, isInView, projects.length]);
 
   return (
-    <section className="py-20 bg-black overflow-hidden" id="project">
+    <section className="py-20 bg-black w-screen overflow-hidden" id="project">
       <div className="container mx-auto px-4 mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
