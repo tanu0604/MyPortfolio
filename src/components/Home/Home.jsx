@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Github, Linkedin, Mail, Download, ExternalLink, Code2 } from "lucide-react";
 import image from "../../assets/Home.png";
-import resume from "../../assets/TanushreePaul.pdf";
 import About from "../About/About"
 import ContactForm from "../ContactForm/ContactForm"
 import Skills from "../Skills/Skills"
@@ -147,7 +146,7 @@ export default function Home() {
             data-aos-delay="350"
           >
             <a
-              href={resume}
+              href="https://drive.google.com/file/d/13kzUH4HzGHoGq3IWzfAMGYFjOK-LVuEe/view?usp=sharing"
               download
               className="bg-white text-black hover:bg-gray-200 transition-colors duration-300 py-2 px-4 rounded flex items-center"
             >
