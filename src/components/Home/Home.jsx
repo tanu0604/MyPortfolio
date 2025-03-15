@@ -123,7 +123,7 @@ export default function Home() {
               data-aos="fade-up"
               data-aos-delay="250"
             >
-              Frontend Developer
+              Full Stack Developer
             </motion.h2>
           </motion.div>
 
