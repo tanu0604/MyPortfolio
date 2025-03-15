@@ -146,7 +146,7 @@ export default function Home() {
             data-aos-delay="350"
           >
             <a
-              href="https://drive.google.com/file/d/13kzUH4HzGHoGq3IWzfAMGYFjOK-LVuEe/view?usp=sharing"
+              href="https://drive.google.com/file/d/1hnoScxekJ_mSEo-SZdfPfyb_PalPUd3f/view?usp=sharing"
               download
               className="bg-white text-black hover:bg-gray-200 transition-colors duration-300 py-2 px-4 rounded flex items-center"
             >
