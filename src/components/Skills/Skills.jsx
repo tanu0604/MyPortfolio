@@ -5,10 +5,11 @@ import { useInView } from "react-intersection-observer";
 const skills = [
   { name: "Java", level: 85 },
   { name: "React", level: 75 },
-  { name: "Node.js", level: 80 },
-  { name: "Express.js", level: 70 },
-  { name: "MongoDb", level: 70 },
   { name: "JavaScript", level: 85 },
+  { name: "Tailwind Css", level: 85 },
+  { name: "Spring Boot", level: 60 },
+  { name: "My Sql", level: 70 },
+  { name: "MongoDb", level: 70 },
 ];
 
 export default function SkillsSection() {
