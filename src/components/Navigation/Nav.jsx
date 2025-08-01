@@ -41,7 +41,7 @@ export default function Nav() {
 
   const scrollToSection = (href) => {
     setIsOpen(false);
-    const element = document.querySelector(href);
+    const element = document.getElementById(href.substring(1));
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
