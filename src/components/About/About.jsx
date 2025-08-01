@@ -41,7 +41,12 @@ export default function About() {
     },
   };
 
-  const text = `Hi, I'm Tanushree Paul, a passionate learner and software developer with a focus on frontend technologies. With 3 years of coding experience, I have honed my skills in React and Tailwind CSS and continue to explore new technologies to improve my craft. I am driven by a problem-solving mindset, consistently challenging myself with coding problems on platforms like LeetCode. My approach is to master one technology before moving to the next, and I enjoy building projects that provide real-world solutions. When I'm not coding, you can find me diving into data structures and algorithms or learning something new to further my understanding of software development. My goal is to keep growing as a developer, build impactful projects, and contribute to the tech community.`;
+  const text = `Hi, I'm Tanushree Paul — a curious builder, problem-solver, and software developer with a growing passion for AI automation. 
+  With 3 years of coding under my belt, I’ve worked on real-world projects, sharpened my frontend skills in React, and now I'm diving headfirst 
+  into the world of AI and automation. From building smooth, responsive interfaces to experimenting with voice agents, chatbots, and smart 
+  automations using tools like n8n, Voiceflow, and beyond — I love turning ideas into interactive experiences. My current focus is on learning 
+  how to build AI-powered systems that feel more human and think a bit smarter.I challenge myself daily with LeetCode, love tackling tough 
+  DSA problems, and believe in mastering one thing deeply before jumping to the next. I’m here to build, break, learn, and grow — one project at a time.`;
 
   return (
     <section className="min-h-screen py-12 bg-black" id="about">
