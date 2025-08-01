@@ -9,6 +9,7 @@ import Skills from './components/Skills/Skills';
 import Project from './components/Projects/Project';
 import Footer from './components/Footer/Footer';
 import ContactForm from './components/ContactForm/ContactForm';
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <Router>
+            <ScrollToTop></ScrollToTop>
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
