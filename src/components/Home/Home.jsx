@@ -133,8 +133,7 @@ Full Stack Developer | Voice & Workflow Automation            </motion.h2>
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            Passionate about creating beautiful, responsive, and user-friendly web applications
-            using modern technologies and best practices.
+            Blending creativity with code to build intelligent, future-ready web experiences.
           </motion.p>
 
           {/* Buttons */}
