@@ -135,83 +135,84 @@ export default function Skills() {
                   : ''
               }`}
             >
-              <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300 overflow-hidden">
-                {/* Hover Gradient Background */}
-                <div className={`
-                  absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 
-                  transition-opacity duration-300 pointer-events-none
-                  bg-gradient-to-r ${category.color} opacity-5 z-0
-                `} />
+              {/* Gradient Border Container */}
+              <div className={`
+                relative rounded-2xl p-[1px] transition-all duration-300
+                ${category.highlight 
+                  ? 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 group-hover:from-purple-500/40 group-hover:to-pink-500/40' 
+                  : `bg-gradient-to-r ${category.color.replace('500', '500/0')} group-hover:${category.color.replace('500', '500/30')}`
+                }
+              `}>
+                {/* Inner Card */}
+                <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 h-full">
                 
-                {/* Highlight Ring for AI & Automation */}
-                {category.highlight && (
-                  <div className="absolute inset-0 rounded-2xl ring-2 ring-purple-500/30 pointer-events-none z-0" />
-                )}
+                  {/* Highlight Ring for AI & Automation */}
+                  {category.highlight && (
+                    <div className="absolute inset-0 rounded-2xl ring-1 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300 pointer-events-none" />
+                  )}
                 
-                {/* Content Wrapper with higher z-index */}
-                <div className="relative z-10">
-                {/* Highlight Badge */}
-                {category.highlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <div className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-1 rounded-full text-white text-sm font-medium">
-                      <Sparkles className="w-4 h-4" />
-                      Current Focus
+                  {/* Highlight Badge */}
+                  {category.highlight && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <div className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-1 rounded-full text-white text-sm font-medium">
+                        <Sparkles className="w-4 h-4" />
+                        Current Focus
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Category Header */}
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className={`
+                      p-3 rounded-xl bg-gradient-to-r ${category.color} 
+                      text-white shadow-lg
+                    `}>
+                      {category.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white font-raleway">
+                        {category.title}
+                      </h3>
+                      {category.subtitle && (
+                        <p className="text-purple-400 text-sm font-medium">
+                          {category.subtitle}
+                        </p>
+                      )}
                     </div>
                   </div>
-                )}
 
-                {/* Category Header */}
-                <div className="flex items-center gap-4 mb-6">
+                  {/* Skills List */}
                   <div className={`
-                    p-3 rounded-xl bg-gradient-to-r ${category.color} 
-                    text-white shadow-lg
+                    grid gap-3
+                    ${category.highlight ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3' : 'grid-cols-1'}
                   `}>
-                    {category.icon}
+                    {category.skills.map((skill, skillIndex) => (
+                      <motion.div
+                        key={skill}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ 
+                          delay: index * 0.1 + skillIndex * 0.05,
+                          duration: 0.3 
+                        }}
+                        className={`
+                          flex items-center gap-3 p-3 rounded-lg
+                          bg-white/5 border border-white/10
+                          hover:bg-white/10 hover:border-white/20
+                          transition-all duration-200
+                          ${category.highlight ? 'hover:border-purple-400/30' : ''}
+                        `}
+                      >
+                        <div className={`
+                          w-2 h-2 rounded-full bg-gradient-to-r ${category.color}
+                          ${category.highlight ? 'animate-pulse' : ''}
+                        `} />
+                        <span className="text-gray-200 font-medium text-sm">
+                          {skill}
+                        </span>
+                      </motion.div>
+                    ))}
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white font-raleway">
-                      {category.title}
-                    </h3>
-                    {category.subtitle && (
-                      <p className="text-purple-400 text-sm font-medium">
-                        {category.subtitle}
-                      </p>
-                    )}
-                  </div>
-                </div>
-
-                {/* Skills List */}
-                <div className={`
-                  grid gap-3
-                  ${category.highlight ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3' : 'grid-cols-1'}
-                `}>
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skill}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={inView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ 
-                        delay: index * 0.1 + skillIndex * 0.05,
-                        duration: 0.3 
-                      }}
-                      className={`
-                        flex items-center gap-3 p-3 rounded-lg
-                        bg-white/5 border border-white/10
-                        hover:bg-white/10 hover:border-white/20
-                        transition-all duration-200
-                        ${category.highlight ? 'hover:border-purple-400/30' : ''}
-                      `}
-                    >
-                      <div className={`
-                        w-2 h-2 rounded-full bg-gradient-to-r ${category.color}
-                        ${category.highlight ? 'animate-pulse' : ''}
-                      `} />
-                      <span className="text-gray-200 font-medium text-sm">
-                        {skill}
-                      </span>
-                    </motion.div>
-                  ))}
-                </div>
                 </div>
               </div>
             </motion.div>
