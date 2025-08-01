@@ -12,6 +12,21 @@ import {
 
 const skillCategories = [
   {
+    title: "AI & Automation",
+    subtitle: "Current Focus",
+    icon: <Bot className="w-6 h-6" />,
+    skills: [
+      "Voice Agents",
+      "Chat Agents", 
+      "AI Workflow Automation",
+      "Voiceflow",
+      "n8n",
+      "Bolt"
+    ],
+    color: "from-purple-500 to-pink-500",
+    highlight: true
+  },
+  {
     title: "Frontend Development",
     icon: <Code2 className="w-6 h-6" />,
     skills: [
@@ -34,21 +49,6 @@ const skillCategories = [
       "Airtable"
     ],
     color: "from-green-500 to-emerald-500"
-  },
-  {
-    title: "AI & Automation",
-    subtitle: "Current Focus",
-    icon: <Bot className="w-6 h-6" />,
-    skills: [
-      "Voice Agents",
-      "Chat Agents", 
-      "AI Workflow Automation",
-      "Voiceflow",
-      "n8n",
-      "Bolt"
-    ],
-    color: "from-purple-500 to-pink-500",
-    highlight: true
   },
   {
     title: "Tools & Collaboration",
@@ -131,16 +131,25 @@ export default function Skills() {
               }}
               className={`relative group ${
                 category.highlight 
-                  ? 'lg:col-span-2' 
+                  ? 'md:col-span-2' 
                   : ''
               }`}
             >
-              <div className={`
-                relative bg-gradient-to-br from-gray-900 to-gray-800 
-                rounded-2xl p-8 border border-gray-700 
-                hover:border-gray-600 transition-all duration-300
-                ${category.highlight ? 'ring-2 ring-purple-500/30 bg-gradient-to-br from-purple-900/20 to-pink-900/20' : ''}
-              `}>
+              <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300 overflow-hidden">
+                {/* Hover Gradient Background */}
+                <div className={`
+                  absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 
+                  transition-opacity duration-300 pointer-events-none
+                  bg-gradient-to-r ${category.color} opacity-5 z-0
+                `} />
+                
+                {/* Highlight Ring for AI & Automation */}
+                {category.highlight && (
+                  <div className="absolute inset-0 rounded-2xl ring-2 ring-purple-500/30 pointer-events-none z-0" />
+                )}
+                
+                {/* Content Wrapper with higher z-index */}
+                <div className="relative z-10">
                 {/* Highlight Badge */}
                 {category.highlight && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -174,7 +183,7 @@ export default function Skills() {
                 {/* Skills List */}
                 <div className={`
                   grid gap-3
-                  ${category.highlight ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-1'}
+                  ${category.highlight ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3' : 'grid-cols-1'}
                 `}>
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
@@ -203,13 +212,7 @@ export default function Skills() {
                     </motion.div>
                   ))}
                 </div>
-
-                {/* Hover Effect */}
-                <div className={`
-                  absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 
-                  transition-opacity duration-300 pointer-events-none
-                  bg-gradient-to-r ${category.color} opacity-5
-                `} />
+                </div>
               </div>
             </motion.div>
           ))}
