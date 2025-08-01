@@ -123,8 +123,7 @@ export default function Home() {
               data-aos="fade-up"
               data-aos-delay="250"
             >
-              Full Stack Developer
-            </motion.h2>
+Full Stack Developer | Voice & Workflow Automation            </motion.h2>
           </motion.div>
 
           {/* Description */}
