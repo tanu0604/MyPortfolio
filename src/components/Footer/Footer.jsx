@@ -64,8 +64,7 @@ export default function Footer() {
               </span>
             </h2>
             <p className="text-gray-400 max-w-xs">
-              Frontend developer passionate about creating beautiful and functional web experiences.
-            </p>
+Designing interfaces. Automating intelligence. Deploying impact.            </p>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/tanu0604"
