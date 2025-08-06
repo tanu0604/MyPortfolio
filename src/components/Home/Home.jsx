@@ -144,12 +144,12 @@ Full Stack Developer | Voice & Workflow Automation            </motion.h2>
             data-aos-delay="350"
           >
             <a
-              href="https://drive.google.com/file/d/1hnoScxekJ_mSEo-SZdfPfyb_PalPUd3f/view?usp=sharing"
+              href="https://drive.google.com/file/d/1VBAQskZC9zYepC_puxmiL9eI1vpL2K6V/view?usp=drivesdk"
               download
               className="bg-white text-black hover:bg-gray-200 transition-colors duration-300 py-2 px-4 rounded flex items-center"
             >
               <Download className="mr-2 h-4 w-4" />
-              Download Resume
+              My Resume
             </a>
 {/*             <a
              href: "/project"
@@ -207,3 +207,4 @@ Full Stack Developer | Voice & Workflow Automation            </motion.h2>
     </>
   );
 }
+
